@@ -85,9 +85,25 @@ Telegram 使用者 → grammy bot → POST /api/session.prompt → DSH Agent
                            → 回覆訊息到 Telegram
 ```
 
+**重要：** bridge 是獨立於 DSH 的**另一個程序**。兩個都要保持執行：
+
+1. 先啟動 DSH（照你原來的方式）
+2. 再啟動 bridge：`dsh-telegram-bridge --token xxx`
+3. 如果重啟了 DSH，bridge 也要重啟 — 但 `sessions.json` 的對應紀錄會保留
+
 - 每個 Telegram chat 對應一個獨立的 DSH session
 - Session 對應表存於 `sessions.json`（自動建立）
 - 使用輪詢方式取得 agent 回應（間隔 800ms，最長等待 120s）
+
+### 建議：建立啟動腳本
+
+建立一個 `.bat` 批次檔（Windows）可以一次啟動：
+
+```batch
+@echo off
+set TELEGRAM_BOT_TOKEN=你的_token
+node "路徑\dsh-telegram-bridge\index.js"
+```
 
 ## 📁 檔案結構
 

@@ -87,9 +87,25 @@ Telegram User → grammy bot → POST /api/session.prompt → DSH Agent
                            → Reply message to Telegram
 ```
 
+**Important:** The bridge runs as a **separate process** from DSH. You need to keep both running:
+
+1. Start DSH (your usual way)
+2. Start the bridge: `dsh-telegram-bridge --token xxx`
+3. If you restart DSH, restart the bridge too — the sessions.json mapping survives restarts
+
 - Each Telegram chat gets its own DSH session
 - Session mapping is persisted in `sessions.json` (auto-created)
 - Uses polling for agent responses (800ms interval, 120s timeout)
+
+### Tip: create a startup script
+
+Create a `.bat` file (Windows) or shell script to start both at once:
+
+```batch
+@echo off
+set TELEGRAM_BOT_TOKEN=your_token
+node "path\to\dsh-telegram-bridge\index.js"
+```
 
 ## 📁 Project Structure
 
