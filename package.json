@@ -1,6 +1,6 @@
 {
   "name": "dsh-telegram-bridge",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Telegram Bot ↔ DeepSeek Harness (DSH) AI Agent bridge — chat with your DSH agent directly from Telegram",
   "type": "module",
   "main": "index.js",
