@@ -105,7 +105,8 @@ async function waitForResponse(sessionId, afterSeq) {
     for (let i = events.length - 1; i >= 0; i--) {
       const entry = events[i]
       if (entry.event?.type === 'assistant/message' && (entry.event.seq ?? -1) > afterSeq) {
-        const content = entry.event.data?.content
+        // assistant/message 的 content 在 data.message.content 底下
+        const content = entry.event.data?.message?.content || entry.event.data?.content
         if (content && Array.isArray(content)) {
           const text = extractTextFromContent(content)
           if (text) return { text, seq: entry.event.seq }
