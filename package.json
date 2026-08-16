@@ -1,0 +1,42 @@
+{
+  "name": "dsh-telegram-bridge",
+  "version": "0.1.0",
+  "description": "Telegram Bot ↔ DeepSeek Harness (DSH) AI Agent bridge — chat with your DSH agent directly from Telegram",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "dsh-telegram-bridge": "./bin/dsh-telegram-bridge.js"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "deepseek",
+    "telegram",
+    "telegram-bot",
+    "ai-agent",
+    "bridge",
+    "chatbot"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Joycate/dsh-telegram-bridge"
+  },
+  "homepage": "https://github.com/Joycate/dsh-telegram-bridge#readme",
+  "bugs": {
+    "url": "https://github.com/Joycate/dsh-telegram-bridge/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "grammy": "^1.34.0"
+  },
+  "files": [
+    "index.js",
+    "bin/",
+    "README.md",
+    "README.zh-TW.md",
+    ".env.example"
+  ]
+}
