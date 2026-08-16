@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "bin": {
-    "dsh-telegram-bridge": "./bin/dsh-telegram-bridge.js"
+    "dsh-telegram-bridge": "bin/dsh-telegram-bridge.js"
   },
   "keywords": [
     "dsh",
@@ -20,7 +20,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Joycate/dsh-telegram-bridge"
+    "url": "git+https://github.com/Joycate/dsh-telegram-bridge.git"
   },
   "homepage": "https://github.com/Joycate/dsh-telegram-bridge#readme",
   "bugs": {
