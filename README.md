@@ -7,6 +7,8 @@
 [![License](https://img.shields.io/npm/l/dsh-telegram-bridge)](LICENSE)
 [![Node](https://img.shields.io/node/v/dsh-telegram-bridge)](https://nodejs.org)
 
+> **🌏 繁體中文版說明請見：[README.zh-TW.md](README.zh-TW.md)**
+
 ---
 
 ## ✨ Features
